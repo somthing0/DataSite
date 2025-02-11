@@ -1,5 +1,5 @@
 from Flask import flask, render_template
-from flask-login import UserMixin, login_required, login_user, logout_user, current_user
+from flask_login import UserMixin, LoginManager, login_required, login_user, logout_user, current_user
 import sqlite
 
 app = flask(__name__)
