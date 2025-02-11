@@ -1,8 +1,8 @@
-from Flask import flask, render_template
+from flask import Flask, render_template
 from flask_login import UserMixin, LoginManager, login_required, login_user, logout_user, current_user
 import sqlite
 
-app = flask(__name__)
+app = Flask(__name__)
 app.secret_key = "6924[j)zm>;%?(C4dyh~,dj<%"
 
 login_manager = LoginManager()
@@ -10,9 +10,9 @@ login_manager.init_app(app)
 
 class User(UserMixin):
     def __init__(Self, Id, Username, Password):
-        self.id = Id
-        self.username = Username
-        self.password = Password
+        Self.id = Id
+        Self.username = Username
+        Self.password = Password
 
 @login_manager.user_loader
 def load_user(user_id):
